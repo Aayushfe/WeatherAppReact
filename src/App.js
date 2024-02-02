@@ -14,11 +14,13 @@ function App() {
         .then((response) => response.json())
         .then((data) => {
           setWeatherData(data);
+          setCity("")
         });
     }
   };
   return (
     <div className="container">
+
       <input
         className="input"
         onChange={(e) => setCity(e.target.value)}
@@ -47,6 +49,3 @@ function App() {
 }
 
 export default App;
-
-// `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
-// const apiKey = "17ed47dca663e740ebcd2e0a28130430"
